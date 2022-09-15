@@ -21,28 +21,28 @@ def test_initializes_with_the_response_venue():
     builder = VenueBuilder(response_venue)
     assert isinstance(builder.response_venue, dict) == True
 
-def test_does_not_change_inputted_venue_when_storing_on_the_instance():
-    builder = VenueBuilder(response_venue)
-    assert builder.response_venue == response_venue
+#def test_does_not_change_inputted_venue_when_storing_on_the_instance():
+#    builder = VenueBuilder(response_venue)
+#    assert builder.response_venue == response_venue
 
 # Then we define a run function.  This function starts with the
 #  `response_venue` dictionary
 #  and returns a Venue instance initialized with the appropriate data (see below).  
 
-def returns_a_venue():
-    builder = VenueBuilder(response_venue)
-    venue = builder.run()
-    assert isinstance(venue, Venue)
+#def returns_a_venue():
+#    builder = VenueBuilder(response_venue)
+#    venue = builder.run()
+#    assert isinstance(venue, Venue)
 
 # extracts the appropriate data.  The menu url is located in the delivery key.
-def test_extracts_id_name_price_rating_likes_menu_url():
-    builder = VenueBuilder(response_venue)
-    venue = builder.run()
-    list(venue.__dict__.keys()) ==  ['foursquare_id', 'name', 'price',
-            'rating', 'likes', 'menu_url']
-    assert list(venue.__dict__.values()) == ['5b2932a0f5e9d70039787cf2', 
-    'Los Tacos Al Pastor', 1, 53,
-    'https://www.seamless.com/menu/los-tacos-al-pastor-141a-front-st-brooklyn/857049']
+#def test_extracts_id_name_price_rating_likes_menu_url():
+#    builder = VenueBuilder(response_venue)
+#    venue = builder.run()
+#    list(venue.__dict__.keys()) ==  ['foursquare_id', 'name', 'price',
+#            'rating', 'likes', 'menu_url']
+#    assert list(venue.__dict__.values()) == ['5b2932a0f5e9d70039787cf2', 
+#    'Los Tacos Al Pastor', 1, 53,
+#    'https://www.seamless.com/menu/los-tacos-al-pastor-141a-front-st-brooklyn/857049']
 
 # Now if you look at the venuebuilder, the run function has a good amount of code.
 # Let's break this into multiple functions.  
@@ -55,9 +55,9 @@ def test_extracts_id_name_price_rating_likes_menu_url():
 
 # When complete, the select_attributes function, 
 # as well as all previous functions should pass.
-def test_select_attributes():
-    builder = VenueBuilder(response_venue)
-    assert builder.select_attributes() == {'foursquare_id': '5b2932a0f5e9d70039787cf2', 
-    'name': 'Los Tacos Al Pastor', 
-    'price': 1, 'likes': 53, 
-    'menu_url': 'https://www.seamless.com/menu/los-tacos-al-pastor-141a-front-st-brooklyn/857049'}
+#def test_select_attributes():
+#    builder = VenueBuilder(response_venue)
+#    assert builder.select_attributes() == {'foursquare_id': '5b2932a0f5e9d70039787cf2', 
+#    'name': 'Los Tacos Al Pastor', 
+#    'price': 1, 'likes': 53, 
+#    'menu_url': 'https://www.seamless.com/menu/los-tacos-al-pastor-141a-front-st-brooklyn/857049'}
